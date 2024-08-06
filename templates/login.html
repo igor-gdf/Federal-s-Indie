@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="background-img">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+        <main>
+            <h1 class="white">Bem-vindo de volta!</h1>
+            <form action="{{ url_for('home') }}" method="post">
+                <div class="container-form">
+                    <label for="email" class="white">Email</label>
+                    <input id="email" class="white" type="email" name="email" placeholder="email@example.com" required>
+                </div>
+                <div class="container-form">
+                    <label for="password" class="white">Senha</label>
+                    <input id="senha" class="white" type="password" name="password" placeholder="Coloque sua senha"
+                        required>
+                </div>
+                <button class="white" type="submit">Login</button>
+                <p class="white">Não tem uma conta? <a href="{{ url_for('cadastro')}}"> cadastre-se</a></p>
+            </form>
+
+        </main>
+    </div>
+</body>
+
+</html>
