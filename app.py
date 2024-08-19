@@ -38,7 +38,7 @@ def sobre():
 
 @app.route('/perfil', defaults={"nome":"usuario demo"})
 @app.route('/perfil/<nome>')
-def sobre():
+def perfil():
     return render_template('perfil.html')
 
 
