@@ -36,6 +36,11 @@ def home():
 def sobre():
     return render_template('sobre.html')
 
+@app.route('/perfil', defaults={"nome":"usuario demo"})
+@app.route('/perfil/<nome>')
+def sobre():
+    return render_template('perfil.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
