@@ -12,5 +12,20 @@
         <img src="" alt="">
         <a href="/perfil">Username</a>
     </div>
+
+    <h2>Jogos Mais Jogados</h2>
+    <ul>
+        {% for jogo in jogos_mais_jogados %}
+        <li>{{ jogo.nome }} - Jogado por {{ jogo.jogadores }} jogadores</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Jogos Recém-Adicionados</h2>
+    <ul>
+        {% for jogo in jogos_recentes %}
+        <li>{{ jogo.nome }} - Adicionado em {{ jogo.data_adicao }}</li>
+        {% endfor %}
+    </ul>
+
 </body>
 </html>
