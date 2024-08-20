@@ -19,7 +19,7 @@ ul {
     gap: 24px;
 }
 
-a {
+li a {
     color: #FFF;
 
     font-size: 16px;

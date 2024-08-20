@@ -1,38 +1,30 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-</head>
-<body>
-    <h1>Home</h1>
-    <div>
-        <img src="" alt="">
-        <a href="/perfil">Username</a>
-    </div>
 
-    <!-- Botão de logout -->
-    <div>
-        <form action="/logout" method="GET">
-            <button type="submit">Logout</button>
-        </form>
-    </div>
+{% extends "layouts/base.html" %}
 
-    <h2>Jogos Mais Jogados</h2>
-    <ul>
-        {% for jogo in jogos_mais_jogados %}
-        <li>{{ jogo.nome }} - Jogado por {{ jogo.jogadores }} jogadores</li>
-        {% endfor %}
-    </ul>
+{% block content %}
+<h1>Home</h1>
+<div>
+    <a href="/perfil">Perfil</a>
+</div>
 
-    <h2>Jogos Recém-Adicionados</h2>
-    <ul>
-        {% for jogo in jogos_recentes %}
-        <li>{{ jogo.nome }} - Adicionado em {{ jogo.data_adicao }}</li>
-        {% endfor %}
-    </ul>
+<!-- Botão de logout -->
+<div>
+    <form action="/logout" method="GET">
+        <button type="submit">Logout</button>
+    </form>
+</div>
 
-</body>
-</html>
+<h2>Jogos Mais Jogados</h2>
+<ul>
+    {% for jogo in jogos_mais_jogados %}
+    <li>{{ jogo.nome }} - Jogado por {{ jogo.jogadores }} jogadores</li>
+    {% endfor %}
+</ul>
+
+<h2>Jogos Recém-Adicionados</h2>
+<ul>
+    {% for jogo in jogos_recentes %}
+    <li>{{ jogo.nome }} - Adicionado em {{ jogo.data_adicao }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

@@ -22,7 +22,7 @@
         {% endwith %}
         <main>
             <h1 class="white">Bem-vindo de volta!</h1>
-            <form action="{{ url_for('home') }}" method="post">
+            <form class="form" action="{{ url_for('home') }}" method="post">
                 <div class="container-form">
                     <label for="email" class="white">Email</label>
                     <input id="email" class="white" type="email" name="email" placeholder="email@example.com" required>
@@ -32,8 +32,8 @@
                     <input id="senha" class="white" type="password" name="password" placeholder="Coloque sua senha"
                         required>
                 </div>
-                <button class="white" type="submit">Login</button>
-                <p class="white">Não tem uma conta? <a href="{{ url_for('cadastro')}}"> cadastre-se</a></p>
+                <button class="white button" type="submit">Login</button>
+                <p class="white center">Não tem uma conta? <a href="{{ url_for('cadastro')}}"> cadastre-se</a></p>
             </form>
 
         </main>

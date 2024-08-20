@@ -44,7 +44,7 @@
     }
 }
 
-form{
+.form{
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -72,7 +72,7 @@ input:focus{
     outline: none;
 }
 
-button{
+.button{
     display: flex;
     padding: 16px;
     justify-content: center;

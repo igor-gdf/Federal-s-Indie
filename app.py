@@ -44,6 +44,10 @@ def home():
     
     return render_template('home.html', jogos_mais_jogados=jogos_mais_jogados, jogos_recentes=jogos_recentes)
 
+@app.route('/beneficios')
+def beneficios():
+    return render_template('beneficios.html')
+
 @app.route('/sobre')
 def sobre():
     return render_template('sobre.html')
