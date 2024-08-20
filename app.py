@@ -8,7 +8,6 @@ USERS = {
     'user@example.com': 'senha123'
 }
 
-# Jogos exemplo
 jogos_mais_jogados = [
     {'nome': 'Jogo A', 'jogadores': 5000},
     {'nome': 'Jogo B', 'jogadores': 3500},
@@ -37,7 +36,7 @@ def home():
         email = request.form['email']
         password = request.form['password']
         if USERS.get(email) == password:
-            session['usuario'] = email  # Armazena o email na sessão
+            session['usuario'] = email
             return redirect(url_for('home'))
         else:
             flash('E-mail ou senha incorretos. Tente novamente.')
@@ -49,7 +48,7 @@ def home():
 def sobre():
     return render_template('sobre.html')
 
-@app.route('/perfil', defaults={"nome": "usuario demo"})
+@app.route('/perfil', defaults={"nome": "usuario_demo"})
 @app.route('/perfil/<nome>')
 def perfil(nome):
     return render_template('perfil.html', nome=nome)

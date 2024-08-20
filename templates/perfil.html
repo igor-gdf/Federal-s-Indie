@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil de {{Usuario}}</title>
+    <title>Perfil de {{ nome }}</title>
 </head>
 <body>
 
-    <img src="{{ url_for('static', filename='imgs/'+usuario+'.png') }}"/>
-    
+    <img src="{{ url_for('static', filename='imgs/'+nome+'.png') }}"/>
+
 </body>
 </html>
