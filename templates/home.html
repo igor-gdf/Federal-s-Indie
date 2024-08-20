@@ -13,6 +13,13 @@
         <a href="/perfil">Username</a>
     </div>
 
+    <!-- Botão de logout -->
+    <div>
+        <form action="/logout" method="GET">
+            <button type="submit">Logout</button>
+        </form>
+    </div>
+
     <h2>Jogos Mais Jogados</h2>
     <ul>
         {% for jogo in jogos_mais_jogados %}
