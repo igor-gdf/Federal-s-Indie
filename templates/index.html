@@ -1,175 +1,146 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
-    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
-</head>
-<body>
+{% extends "layouts/base.html" %}
 
-    <header>
-        <img src="{{url_for('static',filename='imgs/Logo.png')}}" alt="">
-        
-        <nav>
-            <ul>
-                <li><a href="/beneficios">Beneficios</a></li>
-                <li><a href="/projetos">Projetos</a></li>
-                <li><a href="/sobre">Sobre</a></li>
-                <li>
-                    <a href="https://api.whatsapp.com/send?phone=558487179215" target="_blank">
-                        <button class="contato">Contato</button>
-                    </a>
-                </li>                
-                <button class="login" onclick="window.location.href='/login'">Login</button>
-            </ul>
-        </nav>
-    </header>
+{% block content %}
 
+<div class="hero">
 
-    <div class="hero">
-
-        <div class="hero_info">
-            <h1>FEDERAL’S INDIE</h1>
-            <p>Federal's Indie tem como objetivo criar uma plataforma para jogos independentes desenvolvidos por estudantes do Instituto Federal do Rio Grande do Norte (IFRN). A plataforma visa aumentar a visibilidade desses jogos e inspirar novos criadores dentro da comunidade estudantil.</p>
-            <button class="hero_button">Faça login</button>
-        </div>
-
+    <div class="hero_info">
+        <h1>FEDERAL’S INDIE</h1>
+        <p>Federal's Indie tem como objetivo criar uma plataforma para jogos independentes desenvolvidos por estudantes do Instituto Federal do Rio Grande do Norte (IFRN). A plataforma visa aumentar a visibilidade desses jogos e inspirar novos criadores dentro da comunidade estudantil.</p>
+        <button class="hero_button">Faça login</button>
     </div>
 
-    <main>
-        <section class="info">
+</div>
 
-            <div class="introd">
-                <h1>O que é a Federal’s Indie?</h1>
-                <p>A Federal's Indie é uma plataforma dedicada à promoção e visibilidade de jogos independentes desenvolvidos por estudantes do <b>Instituto Federal do Rio Grande do Norte (IFRN)</b>. Seu principal objetivo é oferecer um espaço onde esses jogos possam ser exibidos, aumentando a visibilidade dos criadores e incentivando novos desenvolvedores a se engajar no mundo dos jogos independentes.</p>
-            </div>
+<main>
+    <section class="info">
 
-            <div class="objtvs">
-                <div class="infos">
+        <div class="introd">
+            <h1>O que é a Federal’s Indie?</h1>
+            <p>A Federal's Indie é uma plataforma dedicada à promoção e visibilidade de jogos independentes desenvolvidos por estudantes do <b>Instituto Federal do Rio Grande do Norte (IFRN)</b>. Seu principal objetivo é oferecer um espaço onde esses jogos possam ser exibidos, aumentando a visibilidade dos criadores e incentivando novos desenvolvedores a se engajar no mundo dos jogos independentes.</p>
+        </div>
+
+        <div class="objtvs">
+            <div class="infos">
+                <div class="mini_infos">
+                    <div class="number"><h1>1</h1></div>
+                    <div>
+                        <h2>Sistema de Envio de Jogos</h2>
+                        <p>Federal's Indie terá um sistema intuitivo para os desenvolvedores enviarem seus jogos. Eles poderão adicionar o nome do jogo, uma imagem representativa e o link de onde o jogo está hospedado.</p>
+                    </div>
+                </div>
+
                     <div class="mini_infos">
-                        <div class="number"><h1>1</h1></div>
+                        <div class="number"><h1>2</h1></div>
                         <div>
-                            <h2>Sistema de Envio de Jogos</h2>
-                            <p>Federal's Indie terá um sistema intuitivo para os desenvolvedores enviarem seus jogos. Eles poderão adicionar o nome do jogo, uma imagem representativa e o link de onde o jogo está hospedado.</p>
+                            <h2>Comunidade de Desenvolvedores</h2>
+                            <p>A plataforma incluirá uma área de comunidade onde os desenvolvedores poderão conversar entre si, trocar ideias, dar e receber feedback, e colaborar em novos projetos.</p>
                         </div>
                     </div>
 
-                        <div class="mini_infos">
-                            <div class="number"><h1>2</h1></div>
-                            <div>
-                                <h2>Comunidade de Desenvolvedores</h2>
-                                <p>A plataforma incluirá uma área de comunidade onde os desenvolvedores poderão conversar entre si, trocar ideias, dar e receber feedback, e colaborar em novos projetos.</p>
-                            </div>
-                        </div>
-
-                </div>
-                <div class="infos">
-                    <div class="mini_infos">
-                        <div class="number"><h1>3</h1></div>
-                        <div>
-                            <h2>Educação e Notícias</h2>
-                            <p>Federal's Indie terá uma seção dedicada à educação e notícias, onde os desenvolvedores poderão acessar cursos de terceiros e receber atualizações sobre novos recursos e oportunidades. </p>
-                        </div>
+            </div>
+            <div class="infos">
+                <div class="mini_infos">
+                    <div class="number"><h1>3</h1></div>
+                    <div>
+                        <h2>Educação e Notícias</h2>
+                        <p>Federal's Indie terá uma seção dedicada à educação e notícias, onde os desenvolvedores poderão acessar cursos de terceiros e receber atualizações sobre novos recursos e oportunidades. </p>
                     </div>
-                    <div class="mini_infos">
-                        <div class="number"><h1>4</h1></div>
-                        <div>
-                            <h2>Destaques e Reconhecimento</h2>
-                            <p>A plataforma contará com uma área de destaques, onde os jogos mais inovadores e populares serão apresentados. isso vai ajudar no reconhecimento e visibilidade extra para trabalhos excepcionais.</p>
-                        </div>
+                </div>
+                <div class="mini_infos">
+                    <div class="number"><h1>4</h1></div>
+                    <div>
+                        <h2>Destaques e Reconhecimento</h2>
+                        <p>A plataforma contará com uma área de destaques, onde os jogos mais inovadores e populares serão apresentados. isso vai ajudar no reconhecimento e visibilidade extra para trabalhos excepcionais.</p>
                     </div>
                 </div>
             </div>
-            
-        </section>
-
-        <section class="motiv">
-
-            <div class="introd_motiv">
-                <h1>Principais motivações</h1>
-                <p>A criação de Federal's Indie é motivada pela necessidade de dar visibilidade aos talentos dos estudantes e criar uma comunidade vibrante de desenvolvedores de jogos independentes dentro do IFRN. A plataforma pretende ser um catalisador para inovação e criatividade, proporcionando um ambiente propício para o desenvolvimento de jogos.</p>
-            </div>
-
-            <div class="motivs">
-                <div class="mini_motivs">
-                    <div class="inspiraçao"></div>
-                    <p>Uma das motivações do projeto é o TCC de 2023 do aluno Diogo Henrique Costa Marquês, do curso de Informática para Internet, que criou um jogo chamado O Jardim das Borboletas. Este foi um dos principais motivos para a criação do projeto.</p>
-                </div>
-
-                <div class="mini_motivs">
-                    <p>Uma das motivações do projeto é o TCC de 2023 do aluno Diogo Henrique Costa Marquês, do curso de Informática para Internet, que criou um jogo chamado O Jardim das Borboletas. Este foi um dos principais motivos para a criação do projeto.</p>
-                    <div class="inspiraçao"></div>
-                </div>
-
-                <div class="mini_motivs">
-                    <div class="inspiraçao"></div>
-                    <p>Uma das motivações do projeto é o TCC de 2023 do aluno Diogo Henrique Costa Marquês, do curso de Informática para Internet, que criou um jogo chamado O Jardim das Borboletas. Este foi um dos principais motivos para a criação do projeto.</p>
-                </div>
-            </div>
-        </section>
-        <section class="deves">
-            <h1>Desenvolvedores</h1>
-            <div class="team">
-                <div class="developer">
-                    <img src="{{ url_for('static', filename='imgs/luiz.png') }}"/>
-                    <div class="devinfo">
-                        <h2>LUIZ FERNANDO DE OLIVEIRA RIBEIRO DA CRUZ</h2>
-                        <p>Designer | Programador Fullstack</p>
-                    </div>
-    
-
-                </div>
-                <div class="developer">
-                    <div class="devinfo">
-                        <h2>IGOR GABRIEL ROCHA DE ANDRADE</h2>
-                        <p>Programador Fullstack</p>
-                    </div>
-                    <img src="{{ url_for('static', filename='imgs/igor.png') }}"/>
-
-                </div>
-                <div class="developer">
-                    <img src="{{ url_for('static', filename='imgs/carlos.png') }}"/>
-                    <div class="devinfo">
-                        <h2>CARLOS DAVI DE OLIVEIRA CAVALCANTI</h2>
-                        <p>Designer | Programador Fullstack</p>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-    </main>
-
-    <footer>
-
-        <img src="{{ url_for('static', filename='imgs/logo_branca.png') }}"/>
-
-        <nav>
-            <ul class="footul">
-                <li> <a  class="afoot"href="">Sitemap</a</li>
-                <li> <a  class="afoot"href="">home   </a</li>
-                <li> <a  class="afoot"href="">abouts </a</li>
-                <li> <a  class="afoot"href="">Growers</a</li>
-                <li> <a  class="afoot"href="">Merchants</a></li>
-                <li> <a  class="afoot"href="">Contact</a></li>
-            </ul>
-        </nav>
-
-
-
-        <div class="oficial">
-            <h3>Artistas originais</h3>
-            <p>Hollow Knight (© TeamCherry)</p>
-            <p>Gris (© DevolverDigital)</p>
-            <p>(© HiddenLayerGames)</p>
         </div>
         
+    </section>
 
-    </footer>
+    <section class="motiv">
+
+        <div class="introd_motiv">
+            <h1>Principais motivações</h1>
+            <p>A criação de Federal's Indie é motivada pela necessidade de dar visibilidade aos talentos dos estudantes e criar uma comunidade vibrante de desenvolvedores de jogos independentes dentro do IFRN. A plataforma pretende ser um catalisador para inovação e criatividade, proporcionando um ambiente propício para o desenvolvimento de jogos.</p>
+        </div>
+
+        <div class="motivs">
+            <div class="mini_motivs">
+                <div class="inspiraçao"></div>
+                <p>Uma das motivações do projeto é o TCC de 2023 do aluno Diogo Henrique Costa Marquês, do curso de Informática para Internet, que criou um jogo chamado O Jardim das Borboletas. Este foi um dos principais motivos para a criação do projeto.</p>
+            </div>
+
+            <div class="mini_motivs">
+                <p>Uma das motivações do projeto é o TCC de 2023 do aluno Diogo Henrique Costa Marquês, do curso de Informática para Internet, que criou um jogo chamado O Jardim das Borboletas. Este foi um dos principais motivos para a criação do projeto.</p>
+                <div class="inspiraçao"></div>
+            </div>
+
+            <div class="mini_motivs">
+                <div class="inspiraçao"></div>
+                <p>Uma das motivações do projeto é o TCC de 2023 do aluno Diogo Henrique Costa Marquês, do curso de Informática para Internet, que criou um jogo chamado O Jardim das Borboletas. Este foi um dos principais motivos para a criação do projeto.</p>
+            </div>
+        </div>
+    </section>
+    <section class="deves">
+        <h1>Desenvolvedores</h1>
+        <div class="team">
+            <div class="developer">
+                <img src="{{ url_for('static', filename='imgs/luiz.png') }}"/>
+                <div class="devinfo">
+                    <h2>LUIZ FERNANDO DE OLIVEIRA RIBEIRO DA CRUZ</h2>
+                    <p>Designer | Programador Fullstack</p>
+                </div>
+
+
+            </div>
+            <div class="developer">
+                <div class="devinfo">
+                    <h2>IGOR GABRIEL ROCHA DE ANDRADE</h2>
+                    <p>Programador Fullstack</p>
+                </div>
+                <img src="{{ url_for('static', filename='imgs/igor.png') }}"/>
+
+            </div>
+            <div class="developer">
+                <img src="{{ url_for('static', filename='imgs/carlos.png') }}"/>
+                <div class="devinfo">
+                    <h2>CARLOS DAVI DE OLIVEIRA CAVALCANTI</h2>
+                    <p>Designer | Programador Fullstack</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+</main>
+
+<footer>
+
+    <img src="{{ url_for('static', filename='imgs/logo_branca.png') }}"/>
+
+    <nav>
+        <ul class="footul">
+            <li> <a  class="afoot"href="">Sitemap</a</li>
+            <li> <a  class="afoot"href="">home   </a</li>
+            <li> <a  class="afoot"href="">abouts </a</li>
+            <li> <a  class="afoot"href="">Growers</a</li>
+            <li> <a  class="afoot"href="">Merchants</a></li>
+            <li> <a  class="afoot"href="">Contact</a></li>
+        </ul>
+    </nav>
+
+
+
+    <div class="oficial">
+        <h3>Artistas originais</h3>
+        <p>Hollow Knight (© TeamCherry)</p>
+        <p>Gris (© DevolverDigital)</p>
+        <p>(© HiddenLayerGames)</p>
+    </div>
     
-</body>
-</html>
+
+</footer>
+{% endblock %}
